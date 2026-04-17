@@ -1,25 +1,55 @@
- /* 對 h1 段落的設定 */
 h1 {
-    color: #2c3e50; /* 深藍灰色文字 */
-    font-family: "Microsoft JhengHei", sans-serif; /* 字體 */
-    font-size: 36px; /* 字體大小 */
-    text-align: center; /* 文字置中 */
-    background-color: #ecf0f1; /* 淺灰色背景 */
-    padding: 20px; /* 內邊距 20px */
-    border-bottom: 3px solid #3498db; /* 底部加一條藍色實線 */
-    letter-spacing: 2px; /* 字元間距 */
-    text-shadow: 1px 1px 2px #bdc3c7; /* 加上淡淡的文字陰影 */
-  }
+    color: #4A3728; /* 深古銅褐色，比純黑更有質感 */
+    font-family: "Times New Roman", "Microsoft JhengHei", serif; /* 襯線體更有古典美 */
+    font-size: 32px;
+    text-align: center;
+    
+    /* 淺米色漸層背景，模擬石材感 */
+    background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+    
+    padding: 30px 20px;
+    margin: 20px auto;
+    width: fit-content;      /* 讓背景寬度隨文字長度縮放，不佔滿全螢幕 */
+    min-width: 60%;
+    
+    /* 雙線邊框，增加裝飾感 */
+    border-top: 2px solid #D4AC0D; 
+    border-bottom: 2px solid #D4AC0D;
+    
+    letter-spacing: 5px;     /* 拉大間距，增加莊重感 */
+    text-transform: uppercase;
+    
+    /* 柔和陰影讓標題浮現出來 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+/* 共同基礎樣式 */
 .page p {
-    background-color: #FEFBEA;    /* 極淺的奶油黃 */
-    border: 1px solid #E0C097;    /* 淺咖啡色邊框 */
     padding: 20px;
     margin: 20px auto;
-    width: 90%;                   /* 寬度稍微縮減，不要太貼邊 */
-    box-shadow: 3px 3px 8px rgba(0,0,0,0.05); /* 淡淡的陰影 */
-    color: #4A3728;               /* 深褐色的文字，比純黑更優雅 */
+    width: 90%;
+    line-height: 1.7;
     border-radius: 10px;
+    border-left: 6px solid; /* 側邊裝飾條 */
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.05);
 }
+.god-zeus { background-color: #E3F2FD; border-color: #2196F3; color: #1565C0; }
+.god-hera { background-color: #F3E5F5; border-color: #9C27B0; color: #6A1B9A; }
+.god-poseidon { background-color: #E1F5FE; border-color: #03A9F4; color: #01579B; }
+.god-demeter { background-color: #FFF8E1; border-color: #FFC107; color: #827717; }
+.god-athena { background-color: #F1F8E9; border-color: #8BC34A; color: #33691E; }
+
+/* --- 第二頁眾神 --- */
+.god-apollo { background-color: #FFFDE7; border-color: #FDD835; color: #F57F17; }
+.god-artemis { background-color: #E8F5E9; border-color: #4CAF50; color: #1B5E20; }
+.god-ares { background-color: #FFEBEE; border-color: #F44336; color: #B71C1C; }
+.god-aphrodite { background-color: #FCE4EC; border-color: #E91E63; color: #880E4F; }
+.god-hephaestus { background-color: #FBE9E7; border-color: #FF5722; color: #BF360C; }
+.god-hermes { background-color: #EDE7F6; border-color: #673AB7; color: #4527A0; }
+
+/* --- 第三頁眾神 --- */
+.god-hestia { background-color: #FFF3E0; border-color: #FF9800; color: #E65100; }
 
 body{
 	background-color: #fbf9cc;
