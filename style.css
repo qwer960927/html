@@ -1,27 +1,55 @@
+/* 1. 基礎 h1 設定：只保留結構，去掉顏色 */
+/* --- 基礎標題結構 (原本的 h1) --- */
 h1 {
-    color: #4A3728; /* 深古銅褐色，比純黑更有質感 */
-    font-family: "Times New Roman", "Microsoft JhengHei", serif; /* 襯線體更有古典美 */
-    font-size: 32px;
+    font-family: "Times New Roman", "Microsoft JhengHei", serif;
     text-align: center;
+    /* 移除原本的固定 color，讓 class 來控制 */
     
-    /* 淺米色漸層背景，模擬石材感 */
     background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
-    
     padding: 30px 20px;
     margin: 20px auto;
-    width: fit-content;      /* 讓背景寬度隨文字長度縮放，不佔滿全螢幕 */
     min-width: 60%;
     
-    /* 雙線邊框，增加裝飾感 */
-    border-top: 2px solid #D4AC0D; 
-    border-bottom: 2px solid #D4AC0D;
+    /* 保留頂部金邊，底部邊框交給 .god-title */
+    border-top: 2px solid #D4AC0D;
     
-    letter-spacing: 5px;     /* 拉大間距，增加莊重感 */
-    text-transform: uppercase;
-    
-    /* 柔和陰影讓標題浮現出來 */
+    letter-spacing: 5px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+
+/* --- 共同裝飾樣式 (動畫與字體大小) --- */
+.god-title {
+    font-size: 2.2em; 
+    margin-top: 40px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid; /* 底線會自動抓文字顏色 */
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    text-transform: none; /* 如果不想要全大寫可以加這行 */
+}
+
+.god-title:hover {
+    transform: translateX(10px);
+}
+
+/* --- 個別神祇顏色設定 (加入 !important 強制執行) --- */
+
+/* 第一頁 */
+.god-title-zeus { color: #F1C40F !important; border-color: #F1C40F !important; }
+.god-title-hera { color: #8E44AD !important; border-color: #8E44AD !important; }
+.god-title-poseidon { color: #2980B9 !important; border-color: #2980B9 !important; }
+.god-title-demeter { color: #27AE60 !important; border-color: #27AE60 !important; }
+.god-title-athena { color: #7F8C8D !important; border-color: #7F8C8D !important; }
+.god-title-apollo { color: #E67E22 !important; border-color: #E67E22 !important; }
+
+/* 第二頁 */
+.god-title-artemis { color: #34495E !important; border-color: #34495E !important; }
+.god-title-ares { color: #C0392B !important; border-color: #C0392B !important; }
+.god-title-aphrodite { color: #FF69B4 !important; border-color: #FF69B4 !important; }
+.god-title-hephaestus { color: #D35400 !important; border-color: #D35400 !important; }
+.god-title-hermes { color: #1ABC9C !important; border-color: #1ABC9C !important; }
+.god-title-hestia { color: #E74C3C !important; border-color: #E74C3C !important; }
 
 
 /* 共同基礎樣式 */

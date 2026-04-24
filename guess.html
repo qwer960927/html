@@ -7,13 +7,25 @@
     <script src="guess.js" defer></script>
 </head>
 <body>
-    <div>
-        <h1>猜數字遊戲</h1>
-        <label for="guessField">猜一個數字 (1 到 100):</label>
-        <input type="number" class="guessField" id="guessField" min="1" max="100">
-        <button class="guessSubmit">提交</button>
-        <div class="result"></div>
-        <div class="count"></div>
-    </div>
+    <main class="app">
+        <section class="card">
+            <h1 class="title">猜數字遊戲</h1>
+            <p class="instructions">我已經選好了一個 1 到 100 之間的數字。你能在 10 次之內猜中它嗎？</p>
+            
+            <label for="guessField" class="label">猜一個數字 (1 到 100)</label>
+            <div class="controls">
+                <input type="number" class="guessField" id="guessField" min="1" max="100" inputmode="numeric" placeholder="輸入數字…">
+                <button class="btn guessSubmit">提交</button>
+                <button class="btn reset">重置</button>
+            </div>
+
+            <p class="guesses" aria-live="polite">歷史紀錄：<span class="guessHistory"></span></p>
+            <div class="result" aria-live="polite"></div>
+            <div class="count" aria-live="polite"></div>
+        </section>
+        <footer class="foot">提示：使用鍵盤輸入，按 Enter 快速提交</footer>
+    </main>
+
+    <script src="guess.js" defer></script>
 </body>
 </html>
